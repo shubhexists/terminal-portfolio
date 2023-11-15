@@ -229,6 +229,23 @@ const Command = () => {
                   );
                 }
               }
+            } else if (e.key === "Tab") {
+              e.preventDefault();
+              if (currentCommand.toLowerCase().startsWith("so")) {
+                setCurrentCommand("socials");
+              } else if (currentCommand.toLowerCase().startsWith("sk")) {
+                setCurrentCommand("skills");
+              } else if (currentCommand.toLowerCase().startsWith("a")) {
+                setCurrentCommand("about");
+              } else if (currentCommand.toLowerCase().startsWith("p")) {
+                setCurrentCommand("projects");
+              } else if (currentCommand.toLowerCase().startsWith("r")) {
+                setCurrentCommand("resume");
+              } else if (currentCommand.toLowerCase().startsWith("c")) {
+                setCurrentCommand("clear");
+              } else if (currentCommand.toLowerCase().startsWith("h")) {
+                setCurrentCommand("help");
+              }
             }
           }}
         />
