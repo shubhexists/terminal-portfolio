@@ -1,8 +1,21 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 const Command = () => {
   const [command, setCommand] = useState([]);
   const [currentCommand, setCurrentCommand] = useState("");
+  const [upArrowKeyPressed, setUpArrowKeyPressed] = useState(0);
+  const inputRef = useRef(null);
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (inputRef.current && !inputRef.current.contains(event.target)) {
+        inputRef.current.focus();
+      }
+    };
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
   const getOutput = (command) => {
     switch (command.toLowerCase()) {
       case "help":
@@ -38,9 +51,11 @@ const Command = () => {
             </span>
             pursuing my B.Tech in Software Engineering. Although, I rarely go
             there. I am mostly found in my room, working on some project or
-            learning something new. I am also a huge <span className="text-teal-400">Linux </span>fanboy. I love being
-            inside the <span className="text-teal-400">terminal </span> for absolutely no reason xD. I fact all I use in
-            my laptop is my terminal, IDE and browser that's it!!
+            learning something new. I am also a huge{" "}
+            <span className="text-teal-400">Linux </span>fanboy. I love being
+            inside the <span className="text-teal-400">terminal </span> for
+            absolutely no reason xD. I fact all I use in my laptop is my
+            terminal, IDE and browser that's it!!
             <br />
             <span className="text-teal-400"> Wierd Fact </span> - I have a
             nickname - <span className="text-teal-400">Jerry </span>(Yes the one
@@ -117,8 +132,12 @@ const Command = () => {
               {" "}
               Proximity{" "}
             </a>
-            - Clearly, I love terminals! This is a terminal-based group chat
-            application built using sockets written in C!
+            - Clearly, I love terminals! This is a{" "}
+            <span className="text-teal-400 ml-3">
+              terminal based group chat application
+            </span>{" "}
+            built using <span className="text-teal-400 ml-3">sockets</span>{" "}
+            written in C!
             <br />
             <span className="text-teal-400 ml-3">2. </span>
             <a
@@ -128,8 +147,8 @@ const Command = () => {
               {" "}
               2048{" "}
             </a>
-            - This is a implementation of the popular game 2048 in Flutter.
-            (Dart)
+            - This is a implementation of the popular game{" "}
+            <span className="text-teal-400 ml-3">2048</span> in Flutter. (Dart)
             <br />
             <span className="text-teal-400 ml-3">3. </span>
             <a
@@ -139,8 +158,9 @@ const Command = () => {
               {" "}
               Vault{" "}
             </a>
-            - An oversimplified version control system similar to Git written in
-            Rust (Incomplete but functional)
+            - An oversimplified version control system similar to{" "}
+            <span className="text-teal-400 ml-3">Git </span> written in Rust
+            (Incomplete but functional)
             <br />
             <span className="text-teal-400 ml-3">4. </span>
             <a
@@ -149,7 +169,8 @@ const Command = () => {
             >
               Go-JSON-DB
             </a>
-            - A simple JSON database written in Go. (Functional)
+            - A simple <span className="text-teal-400 ml-3">JSON Database</span>{" "}
+            written in Go. (Functional)
           </div>
         );
       case "clear":
@@ -184,16 +205,30 @@ const Command = () => {
         <input
           className="bg-transparent outline-none border-none font-mono ml-2 text-amber-500"
           type="text"
+          ref={inputRef}
           value={currentCommand}
           autoFocus={true}
           onChange={(e) => setCurrentCommand(e.target.value)}
-          onKeyPress={(e) => {
+          onKeyDown={(e) => {
             if (e.key === "Enter") {
               setCommand((prevCommand) => [
                 ...prevCommand,
-                { command: currentCommand.toLowerCase(), output: getOutput(currentCommand) },
+                {
+                  command: currentCommand.toLowerCase(),
+                  output: getOutput(currentCommand),
+                },
               ]);
               setCurrentCommand("");
+              setUpArrowKeyPressed(0);
+            } else if (e.keyCode === 38) {
+              if (command.length > 0) {
+                setUpArrowKeyPressed(upArrowKeyPressed + 1);
+                if (command.length - upArrowKeyPressed - 1 >= 0) {
+                  setCurrentCommand(
+                    command[command.length - upArrowKeyPressed - 1].command
+                  );
+                }
+              }
             }
           }}
         />
