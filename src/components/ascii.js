@@ -5,7 +5,7 @@ import React from "react";
 const Ascii = () => {
   return (
     <div>
-      <pre className="text-left text-teal-400 font-bold mb-2 drop-shadow-xl">
+      <pre className="text-left text-teal-400 font-bold mb-2 drop-shadow-xl selection:bg-yellow-900 selection:text-white">
         {`
      ____  _           _     _                     
     / ___|| |__  _   _| |__ | |__   __ _ _ __ ___  
