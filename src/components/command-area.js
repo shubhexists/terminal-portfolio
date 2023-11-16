@@ -8,6 +8,11 @@ const Command = () => {
   useEffect(() => {
     const handleClick = (event) => {
       if (inputRef.current && !inputRef.current.contains(event.target)) {
+        inputRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "start",
+        });
         inputRef.current.focus();
       }
     };
@@ -32,7 +37,7 @@ const Command = () => {
             <span className="text-teal-400 ml-3"> projects</span> - I have made
             some cool stuff too ;) <br />
             <span className="text-teal-400 ml-3"> resume</span> - Checkout my
-            Resume (PDF) <br />
+            Resume <br />
             <span className="text-teal-400 ml-3"> clear</span> - Clear the
             terminal
           </div>
@@ -205,7 +210,10 @@ const Command = () => {
               {item.command}
             </div>
           </div>
-          <div className="font-mono text-left ml-16 mb-3 selection:bg-yellow-900 mr-10">
+          <div
+            className="font-mono text-left ml-16 mb-3 selection:bg-yellow-900 mr-10"
+            id="output-content"
+          >
             {item.output}
           </div>
         </div>
@@ -216,7 +224,7 @@ const Command = () => {
           visitor@jerry~${" "}
         </div>
         <input
-          className="bg-transparent outline-none border-none font-mono ml-2 text-amber-500"
+          className="bg-transparent outline-none border-none font-mono ml-2 text-amber-500 w-2/3"
           type="text"
           ref={inputRef}
           value={currentCommand}
