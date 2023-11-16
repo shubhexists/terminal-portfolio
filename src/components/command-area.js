@@ -205,7 +205,7 @@ const Command = () => {
               {item.command}
             </div>
           </div>
-          <div className="font-mono text-left ml-16 mb-3 selection:bg-yellow-900">
+          <div className="font-mono text-left ml-16 mb-3 selection:bg-yellow-900 mr-10">
             {item.output}
           </div>
         </div>
