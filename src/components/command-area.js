@@ -176,6 +176,12 @@ const Command = () => {
       case "clear":
         setCommand([]);
         return "";
+      case "resume":
+        window.open(
+          "https://drive.google.com/file/d/1QFsmevWTR6zvqrInKiD3zWFRDWpTzXdT/view?usp=sharing",
+          "_blank"
+        );
+        return "Heading to resume...";
       default:
         return (
           <div>
@@ -195,13 +201,20 @@ const Command = () => {
               {" "}
               visitor@jerry~${" "}
             </div>
-            <div className="ml-2 font-mono selection:bg-yellow-900">{item.command}</div>
+            <div className="ml-2 font-mono selection:bg-yellow-900">
+              {item.command}
+            </div>
           </div>
-          <div className="font-mono text-left ml-16 mb-3 selection:bg-yellow-900">{item.output}</div>
+          <div className="font-mono text-left ml-16 mb-3 selection:bg-yellow-900">
+            {item.output}
+          </div>
         </div>
       ))}
       <div className="flex flex-row">
-        <div className="text-teal-500 font-bold ml-10 selection:bg-yellow-900"> visitor@jerry~$ </div>
+        <div className="text-teal-500 font-bold ml-10 selection:bg-yellow-900">
+          {" "}
+          visitor@jerry~${" "}
+        </div>
         <input
           className="bg-transparent outline-none border-none font-mono ml-2 text-amber-500"
           type="text"
