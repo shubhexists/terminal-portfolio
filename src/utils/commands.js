@@ -160,7 +160,7 @@ export const getOutput = (command, setCommand) => {
         return "";
       case "resume":
         window.open(
-          "https://drive.google.com/file/d/1QFsmevWTR6zvqrInKiD3zWFRDWpTzXdT/view?usp=sharing",
+          "https://drive.google.com/file/d/17EPN54tfs_6RTUZHt-YKGD36xM1Fn0Ca/view?usp=sharing",
           "_blank"
         );
         return "Heading to resume...";
