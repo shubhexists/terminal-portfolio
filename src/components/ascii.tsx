@@ -1,5 +1,3 @@
-import React from "react";
-
 // This is a placeholder component for the ASCII art.
 // Write the name Shubham in ASCII Art
 const Ascii = () => {

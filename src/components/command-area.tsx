@@ -1,14 +1,23 @@
-import React from "react";
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { keybindings } from "../utils/keybindings";
-const Command = () => {
-  const [command, setCommand] = useState([]);
-  const [currentCommand, setCurrentCommand] = useState("");
-  const [upArrowKeyPressed, setUpArrowKeyPressed] = useState(0);
-  const inputRef = useRef(null);
+
+interface CommandItem {
+  command: string;
+  output: string | JSX.Element;
+}
+
+const Command: React.FC = () => {
+  const [command, setCommand] = useState<CommandItem[]>([]);
+  const [currentCommand, setCurrentCommand] = useState<string>("");
+  const [upArrowKeyPressed, setUpArrowKeyPressed] = useState<number>(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+
   useEffect(() => {
-    const handleClick = (event) => {
-      if (inputRef.current && !inputRef.current.contains(event.target)) {
+    const handleClick = (event: MouseEvent) => {
+      if (
+        inputRef.current &&
+        !inputRef.current.contains(event.target as Node)
+      ) {
         inputRef.current.scrollIntoView({
           behavior: "smooth",
           block: "nearest",
@@ -17,12 +26,14 @@ const Command = () => {
         inputRef.current.focus();
       }
     };
+
     document.addEventListener("click", handleClick);
+
     return () => {
       document.removeEventListener("click", handleClick);
     };
   }, []);
-  
+
   return (
     <div>
       {command.map((item, index) => (
