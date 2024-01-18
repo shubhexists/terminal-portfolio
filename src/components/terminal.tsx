@@ -1,4 +1,3 @@
-import React from "react";
 import Ascii from "./ascii";
 import Header from "./header";
 import Command from "./command-area";

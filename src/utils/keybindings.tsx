@@ -1,14 +1,20 @@
 import { getOutput } from "./commands";
+import React from "react";
+
+interface CommandItem {
+  command: string;
+  output: JSX.Element | string;
+}
 
 export const keybindings = (
-  e,
-  setCommand,
-  setUpArrowKeyPressed,
-  setCurrentCommand,
-  currentCommand,
-  command,
-  upArrowKeyPressed
-) => {
+  e: React.KeyboardEvent<HTMLInputElement>,
+  setCommand: React.Dispatch<React.SetStateAction<CommandItem[]>>,
+  setUpArrowKeyPressed: React.Dispatch<React.SetStateAction<number>>,
+  setCurrentCommand: React.Dispatch<React.SetStateAction<string>>,
+  currentCommand: string,
+  command: CommandItem[],
+  upArrowKeyPressed: number
+): void => {
   if (e.key === "Enter") {
     setCommand((prevCommand) => [
       ...prevCommand,
