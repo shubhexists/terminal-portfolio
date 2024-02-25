@@ -194,7 +194,7 @@ export const getOutput = (
       return "";
     case "resume":
       window.open(
-        "https://drive.google.com/file/d/17EPN54tfs_6RTUZHt-YKGD36xM1Fn0Ca/view?usp=sharing",
+        "https://drive.google.com/file/d/1IKx6bvwpaMueK7BAwQp-a5GkBJoZNj9u/view?usp=sharing",
         "_blank"
       );
       return "Heading to resume...";
