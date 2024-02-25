@@ -27,6 +27,11 @@ export const getOutput = (
           Resume <br />
           <span className="text-teal-400 ml-3"> clear</span> - Clear the
           terminal
+          <br />
+          <span className="text-teal-400 ml-3"> experience</span> - Checkout my
+          professional experience <br />
+          <span className="text-teal-400 ml-3"> goals</span> - My future plans
+          <br />
         </div>
       );
     case "about":
@@ -88,7 +93,7 @@ export const getOutput = (
           </span>
           <br />
           <span className="ml-7">
-            JavaScript, Go, Python, Dart (Flutter), Rust, C, Java{" "}
+            JavaScript, TypeScript, Rust, Go, Python, Dart (Flutter), C, Java{" "}
           </span>
           <br />
           <span className="text-teal-400 ml-3">Frameworks/Libraries - </span>
@@ -155,10 +160,33 @@ export const getOutput = (
             className="text-purple-400"
             href="https://github.com/shubhexists/go-json-db"
           >
-            Go-JSON-DB
+            Go-JSON-DB{" "}
           </a>
           - A simple <span className="text-teal-400 ml-3">JSON Database</span>{" "}
           written in Go. (Functional)
+          <br />
+          <span className="text-teal-400 ml-3">5. </span>
+          <a
+            className="text-purple-400"
+            href="https://github.com/shubhexists/react-maps"
+          >
+            React Maps{" "}
+          </a>
+          - A collection of light-weight React components for interactive maps
+          by parsing SVG Images.
+          <br />
+          <span className="text-teal-400 ml-3">6. </span>
+          <a
+            className="text-purple-400"
+            href="https://github.com/shubhexists/prism"
+          >
+            Prism{" "}
+          </a>
+          - Prism is a replica of ExpressJS written from scratch for learning
+          purpose.{" "}
+          <span className="text-red-500">
+            (Still has a lot of bugs though :( ).
+          </span>
         </div>
       );
     case "clear":
@@ -170,6 +198,146 @@ export const getOutput = (
         "_blank"
       );
       return "Heading to resume...";
+    case "experience":
+      return (
+        <div>
+          <span className="text-teal-400 ml-3">1. </span>
+          <span className="text-purple-400">INDOTABI TOURS</span> - I am working
+          as a <span className="text-teal-400 ml-3">Sole Developer </span> to
+          build and deploy the company’s website. It has a primary language{" "}
+          <span className="text-teal-400 ml-3">Japanese </span> and is a mobile
+          centric website, aimed to display the companies products.
+          <br />
+          <span className="text-red-400 ml-3"> Accomplishments</span>
+          <br />
+          <span className="ml-7">
+            <span className="text-teal-400 ml-3"> a) </span> I built the website
+            using <span className="text-teal-400 ml-3">NextTS </span> as the
+            frontend and with{" "}
+            <span className="text-teal-400 ml-3">ExpressJS </span> as the
+            backend.
+          </span>
+          <br />
+          <span className="ml-7">
+            <span className="text-teal-400 ml-3"> b) </span> I worked with
+            roughly <span className="text-teal-400 ml-3">3000+ lines </span> of{" "}
+            <span className="text-teal-400 ml-3">PostgreSQL </span> scripts to
+            successfully construct a good database schema
+          </span>
+          <br />
+          <span className="ml-7">
+            <span className="text-teal-400 ml-3"> c) </span> The website is
+            currently in production -
+            <span className="text-teal-400 ml-3">(Mobile Centric UI) </span>
+            <a href="https://indotabi.com" className="text-purple-400">
+              indotabi.com
+            </a>
+          </span>
+          <br />
+          <span className="text-teal-400 ml-3">2. </span>
+          <span className="text-purple-400">Zoomtod</span> - As a{" "}
+          <span className="text-teal-400 ml-3">Sole Developer </span>
+          for the company, my role was to get the product up and running. It was
+          a stable, feature rich,{" "}
+          <span className="text-teal-400 ml-3">
+            Voice only communication application{" "}
+          </span>
+          built using<span className="text-teal-400 ml-3">WebRTC </span>. Now
+          the application is successfully in production with
+          <span className="text-teal-400 ml-3">500+ Users</span> and More that
+          100+ users actively using the App for more than{" "}
+          <span className="text-teal-400 ml-3">8 hrs/day</span>.
+          <br />
+          <span className="text-red-400 ml-3"> Accomplishments</span>
+          <br />
+          <span className="ml-7">
+            <span className="text-teal-400 ml-3"> a) </span> Built a cross
+            platform application using{" "}
+            <span className="text-teal-400 ml-3">Flutter(Dart) </span> Deployed
+            on Play Store -
+            <a
+              href="https://play.google.com/store/apps/details?id=io.livekit.zoomtod"
+              className="text-purple-400"
+            >
+              {" "}
+              Zoomtod
+            </a>
+          </span>
+          <br />
+          <span className="ml-7">
+            <span className="text-teal-400 ml-3"> b) </span> Built an Admin
+            Panel in <span className="text-teal-400 ml-3">ReactJS </span> that
+            tracks constant activities of all the rooms using Web Sockets.
+          </span>
+          <br />
+          <span className="ml-7">
+            <span className="text-teal-400 ml-3"> c) </span>Built the entire
+            Back-end stack using{" "}
+            <span className="text-teal-400 ml-3">NodeJS </span>,{" "}
+            <span className="text-teal-400 ml-3">Livekit </span>,
+            <span className="text-teal-400 ml-3">WebRTC </span> and
+            <span className="text-teal-400 ml-3">SocketIO </span>.
+          </span>
+          <br />
+          <span className="ml-7">
+            <span className="text-teal-400 ml-3"> d) </span>Deployed the project
+            using <span className="text-teal-400 ml-3">Docker </span> and{" "}
+            <span className="text-teal-400 ml-3">NGINX</span> on an{" "}
+            <span className="text-teal-400 ml-3">EC2 </span> AWS Instance.
+          </span>
+          <br />
+          <span className="ml-7">
+            <span className="text-teal-400 ml-3"> e) </span>Set Up Server and
+            API Monitoring using{" "}
+            <span className="text-teal-400 ml-3">Grafana</span>,{" "}
+            <span className="text-teal-400 ml-3">Prometheus </span>and used{" "}
+            <span className="text-teal-400 ml-3">Loki </span>
+            for logs collection.
+          </span>
+          <br />
+          <span className="text-teal-400 ml-3">3. </span>
+          <span className="text-purple-400">Vitalth Pvt. Ltd.</span> - I was
+          responsible for using Govt. of India’s UHI (Unified Health Interface)
+          architecture to build a robust backend for the company.
+          <br />
+          <span className="text-red-400 ml-3"> Accomplishments</span>
+          <br />
+          <span className="ml-7">
+            <span className="text-teal-400 ml-3"> a) </span> I successfully
+            completed the M1 and M2 phases of the
+            <span className="text-teal-400 ml-3">UHI </span>on-boarding process.
+            (There are 3 steps in total).
+          </span>
+          <br />
+          <span className="ml-7">
+            <span className="text-teal-400 ml-3"> b) </span> Developed the
+            backend in<span className="text-teal-400 ml-3">NodeJS </span>
+          </span>
+        </div>
+      );
+    case "goals":
+      return (
+        <div>
+          This is a tough one actually and honestly I am not sure where would
+          life take me. There are so many things I find so appealing that it
+          sometimes becomes a mess what I actually want to do. The basic
+          philosophy is simple, do something that makes me{" "}
+          <span className="text-teal-400 ml-3">happy </span>. (Isn't that what
+          everyone wants Haha?). Overall I want to be a part of{" "}
+          <span className="text-teal-400 ml-3">something big </span>, something
+          that has a <span className="text-teal-400 ml-3">huge impact </span> on
+          the world (And big doesn't mean monetarily here). The bucket list is
+          so big that I can't even list it all here :/ . Some of the fields are
+          <span className="text-teal-400 ml-3">
+            Artificial Intellligence{" "}
+          </span>, <span className="text-teal-400 ml-3">Space</span>,{" "}
+          <span className="text-teal-400 ml-3">Nuclear Energy</span>,
+          <span className="text-teal-400 ml-3">Hydroponics </span>(I know Wierd
+          :)) And who knows, I might end up doing something completely
+          different. That's life isn't it?
+          <br />
+        </div>
+      );
     default:
       return (
         <div>

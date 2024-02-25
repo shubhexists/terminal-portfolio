@@ -50,6 +50,10 @@ export const keybindings = (
       setCurrentCommand("clear");
     } else if (currentCommand.toLowerCase().startsWith("h")) {
       setCurrentCommand("help");
+    } else if (currentCommand.toLowerCase().startsWith("g")) {
+      setCurrentCommand("goals");
+    } else if (currentCommand.toLowerCase().startsWith("e")) {
+      setCurrentCommand("experience");
     }
   }
 };
