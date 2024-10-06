@@ -2,7 +2,7 @@ const Header = () => {
   return (
     <div className="bg-[#0d1117] text-[#58a6ff] w-screen overflow-x-hidden font-mono p-4">
       <div className="max-w-3xl mx-auto">
-        <pre className="text-[#58a6ff] font-bold">
+        <pre className="text-[#58a6ff] font-bold mb-4">
           {`
  ____  _           _     _                     
 / ___|| |__  _   _| |__ | |__   __ _ _ __ ___  
