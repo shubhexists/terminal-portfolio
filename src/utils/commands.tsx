@@ -217,7 +217,7 @@ export const getOutput = (command: string, setCommand: React.Dispatch<React.SetS
       setCommand([]);
       return '';
     case 'resume':
-      window.open('https://drive.google.com/file/d/1fYiGVeh-AE56aOrlkzuUdOc6I_3EvSA0/view?usp=sharing', '_blank');
+      window.open('https://drive.google.com/file/d/1EismNOcVJc3BtBRkWU_z_Hz6KvQHgoja/view?usp=sharing', '_blank');
       return 'Opening resume in a new tab...';
     case 'experience':
       return (
