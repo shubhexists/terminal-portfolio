@@ -58,6 +58,7 @@ export const getOutput = (command: string, setCommand: React.Dispatch<React.SetS
     case 'socials':
       return (
         <div className="space-y-2">
+          <p>Social life? What's that? I live in a basement :) ...</p>
           <p>Thanks for your interest! Here's where you can find me online:</p>
           <div className="flex flex-col space-y-1">
             <div className="flex">
