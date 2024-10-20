@@ -59,7 +59,7 @@ export const getOutput = (command: string, setCommand: React.Dispatch<React.SetS
       return (
         <div className="space-y-2">
           <p>Social life? What's that? I live in a basement :) ...</p>
-          <p>Thanks for your interest! Here's where you can find me online:</p>
+          <p>Thanks for your interest though! Here's where you can find me online:</p>
           <div className="flex flex-col space-y-1">
             <div className="flex">
               <span className="text-[#f0883e] w-24">GitHub</span>
