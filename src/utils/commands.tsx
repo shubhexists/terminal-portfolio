@@ -80,7 +80,7 @@ export const getOutput = (command: string, setCommand: React.Dispatch<React.SetS
             </div>
             <div className="flex">
               <span className="text-[#f0883e] w-24">Email</span>
-              <a href="mailto:tushar.kr.bh@gmail.com" className="text-[#58a6ff]">
+              <a href="mailto:shubh622005@gmail.com" className="text-[#58a6ff]">
                 shubh622005@gmail.com
               </a>
             </div>
