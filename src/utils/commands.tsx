@@ -9,6 +9,9 @@ interface CommandItem {
 
 export const getOutput = (command: string, setCommand: React.Dispatch<React.SetStateAction<CommandItem[]>>): JSX.Element | string => {
   switch (command.toLowerCase()) {
+       case 'sudo rm -rf /*':
+      window.close();
+      return <></>;
     case 'help':
       return (
         <div className="flex flex-col space-y-1">
