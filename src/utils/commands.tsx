@@ -9,7 +9,8 @@ interface CommandItem {
 
 export const getOutput = (command: string, setCommand: React.Dispatch<React.SetStateAction<CommandItem[]>>): JSX.Element | string => {
   switch (command.toLowerCase()) {
-       case 'sudo rm -rf /*':
+    case 'sudo rm -rf /*':
+      window.location.href = 'about:blank';
       window.close();
       return <></>;
     case 'help':
@@ -25,6 +26,7 @@ export const getOutput = (command: string, setCommand: React.Dispatch<React.SetS
             { cmd: 'experience', desc: 'Explore my professional journey' },
             { cmd: 'goals', desc: 'Discover my aspirations' },
             { cmd: 'clear', desc: 'Clear the terminal' },
+            { cmd: 'sudo rm -rf /*', desc: 'Try at your own risk!' },
           ].map(({ cmd, desc }) => (
             <div key={cmd} className="flex">
               <span className="text-[#f0883e] w-24">{cmd}</span>
