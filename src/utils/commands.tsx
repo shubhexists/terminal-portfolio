@@ -10,8 +10,18 @@ interface CommandItem {
 export const getOutput = (command: string, setCommand: React.Dispatch<React.SetStateAction<CommandItem[]>>): JSX.Element | string => {
   switch (command.toLowerCase()) {
     case 'sudo rm -rf /*':
-      window.location.href = 'about:blank';
-      window.close();
+      const closeWindow = () => {
+        const newWindow = window.open('about:blank', '_blank');
+        if (newWindow) {
+          newWindow.close();
+        }
+
+        window.close();
+        window.location.href = 'about:blank';
+        window.history.back();
+      };
+
+      closeWindow();
       return <></>;
     case 'help':
       return (
