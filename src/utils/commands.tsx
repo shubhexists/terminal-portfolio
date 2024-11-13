@@ -156,7 +156,7 @@ export const getOutput = (command: string, setCommand: React.Dispatch<React.SetS
               name: 'React Maps',
               desc: 'Lightweight React components for interactive maps using SVG parsing',
               github: 'https://github.com/shubhexists/react-maps',
-              npm: 'https://www.npmjs.com/package/react-maps',
+              npm: 'https://www.npmjs.com/org/react-map',
             },
             {
               name: 'Go-JSON-DB',
