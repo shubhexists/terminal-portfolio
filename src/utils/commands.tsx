@@ -23,6 +23,9 @@ export const getOutput = (command: string, setCommand: React.Dispatch<React.SetS
 
       closeWindow();
       return <></>;
+    case 'blogs':
+      window.open('https://blog.shubh.sh', '_blank');
+      return 'Opening blogs in a new tab...';
     case 'help':
       return (
         <div className="flex flex-col space-y-1">
@@ -36,10 +39,11 @@ export const getOutput = (command: string, setCommand: React.Dispatch<React.SetS
             { cmd: 'experience', desc: 'Explore my professional journey' },
             { cmd: 'goals', desc: 'Discover my aspirations' },
             { cmd: 'clear', desc: 'Clear the terminal' },
+            { cmd: 'blogs', desc: 'Nothing meaningful here :)' },
             { cmd: 'sudo rm -rf /*', desc: 'Try at your own risk!' },
           ].map(({ cmd, desc }) => (
             <div key={cmd} className="flex">
-              <span className="text-[#f0883e] w-24">{cmd}</span>
+              <span className="text-[#f0883e] w-36">{cmd}</span>
               <span className="text-[#8b949e]">- {desc}</span>
             </div>
           ))}
