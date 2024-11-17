@@ -52,6 +52,10 @@ export const keybindings = (
       setCurrentCommand('goals');
     } else if (currentCommand.toLowerCase().startsWith('e')) {
       setCurrentCommand('experience');
+    } else if (currentCommand.toLowerCase().startsWith('b')) {
+      setCurrentCommand('blogs');
+    } else if (currentCommand.toLowerCase().startsWith('sudo')) {
+      setCurrentCommand('sudo rm -rf /*');
     }
   }
 };
