@@ -23,6 +23,9 @@ export const getOutput = (command: string, setCommand: React.Dispatch<React.SetS
 
       closeWindow();
       return <></>;
+    case 'clicks':
+      window.open('https://photos.shubh.sh/grid', '_blank');
+      return 'Opening clicks in a new tab...';
     case 'blogs':
       window.open('https://blog.shubh.sh', '_blank');
       return 'Opening blogs in a new tab...';
@@ -31,19 +34,20 @@ export const getOutput = (command: string, setCommand: React.Dispatch<React.SetS
         <div className="flex flex-col space-y-1">
           <span className="text-[#58a6ff]">Available commands:</span>
           {[
-            { cmd: 'about', desc: 'Learn more about me' },
-            { cmd: 'socials', desc: 'Find me on the web' },
-            { cmd: 'skills', desc: 'Check out my technical skills' },
-            { cmd: 'projects', desc: 'View some of my cool projects' },
-            { cmd: 'resume', desc: 'Take a look at my resume' },
-            { cmd: 'experience', desc: 'Explore my professional journey' },
-            { cmd: 'goals', desc: 'Discover my aspirations' },
-            { cmd: 'clear', desc: 'Clear the terminal' },
-            { cmd: 'blogs', desc: 'Nothing meaningful here :)' },
-            { cmd: 'sudo rm -rf /*', desc: 'Try at your own risk!' },
+            { cmd: '🌟 about', desc: 'Learn more about me' },
+            { cmd: '🌐 socials', desc: 'Find me on the web' },
+            { cmd: '💻 skills', desc: 'Check out my technical skills' },
+            { cmd: '🚀 projects', desc: 'View some of my cool projects' },
+            { cmd: '📄 resume', desc: 'Take a look at my resume' },
+            { cmd: '💼 experience', desc: 'Explore my professional journey' },
+            { cmd: '🎯 goals', desc: 'Discover my aspirations' },
+            { cmd: '📸 clicks', desc: 'I upload random photographs here :)' },
+            { cmd: '🧹 clear', desc: 'Clear the terminal' },
+            { cmd: '✍️ blogs', desc: 'Nothing meaningful here :)' },
+            { cmd: '⚠️ sudo rm -rf /*', desc: 'Try at your own risk!' },
           ].map(({ cmd, desc }) => (
             <div key={cmd} className="flex">
-              <span className="text-[#f0883e] w-36">{cmd}</span>
+              <span className="text-[#f0883e] w-44">{cmd}</span>
               <span className="text-[#8b949e]">- {desc}</span>
             </div>
           ))}

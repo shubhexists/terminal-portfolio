@@ -40,11 +40,13 @@ export const keybindings = (
       setCurrentCommand('skills');
     } else if (currentCommand.toLowerCase().startsWith('a')) {
       setCurrentCommand('about');
-    } else if (currentCommand.toLowerCase().startsWith('p')) {
+    } else if (currentCommand.toLowerCase().startsWith('pr')) {
       setCurrentCommand('projects');
+    } else if (currentCommand.toLowerCase().startsWith('cli')) {
+      setCurrentCommand('clicks');
     } else if (currentCommand.toLowerCase().startsWith('r')) {
       setCurrentCommand('resume');
-    } else if (currentCommand.toLowerCase().startsWith('c')) {
+    } else if (currentCommand.toLowerCase().startsWith('cle')) {
       setCurrentCommand('clear');
     } else if (currentCommand.toLowerCase().startsWith('h')) {
       setCurrentCommand('help');
