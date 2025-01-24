@@ -130,7 +130,7 @@ export const getOutput = (
             <div className="flex">
               <span className="text-[#f0883e] w-24">LinkedIn</span>
               <a
-                href="https://www.linkedin.com/in/shubham-singh-36204b238/"
+                href="https://www.linkedin.com/in/shubhexists/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#58a6ff]"
