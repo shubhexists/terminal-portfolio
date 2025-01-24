@@ -71,15 +71,15 @@ export const getOutput = (
             Hey there! Thanks for your interest in getting to know me better.
           </p>
           <p>
-            I'm <span className="text-[#f0883e]">Shubham Singh</span>, currently
+            I'm <span className="text-[#f0883e]">Shubham Singh</span>, 20, currently
             a Senior Backend Engineer at{" "}
             <a
-              href="https://tezda.com"
+              href="https://www.dardoc.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#58a6ff]"
             >
-              Tezda
+              Dardoc
             </a>
             .
           </p>
@@ -350,10 +350,21 @@ export const getOutput = (
         <div className="space-y-6">
           {[
             {
+              company: "Dardoc",
+              role: "Software Engineer",
+              location: "Remote, UAE",
+              date: "Feb 2025 - Current",
+              description: "Backend Software Engineer",
+              achievements: [
+                "Working on the generating analytics from the Database.",
+              ],
+              icon: <FaCode className="text-[#f0883e] text-4xl" />,
+            },
+            {
               company: "Tezda Inc",
               role: "Senior Backend Developer",
               location: "Remote, UK",
-              date: "April 2024 - Current",
+              date: "April 2024 - Feb 2025",
               description: "Working on advanced backend systems and RTC stack.",
               achievements: [
                 "Developed App Notifications Backend using queues, sockets, and Firebase (FCM)",
