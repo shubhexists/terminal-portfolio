@@ -1,5 +1,5 @@
-import { getOutput } from './commands';
-import React from 'react';
+import { getOutput } from "./commands";
+import React from "react";
 
 interface CommandItem {
   command: string;
@@ -15,7 +15,7 @@ export const keybindings = (
   command: CommandItem[],
   upArrowKeyPressed: number
 ): void => {
-  if (e.key === 'Enter') {
+  if (e.key === "Enter") {
     setCommand((prevCommand) => [
       ...prevCommand,
       {
@@ -23,41 +23,41 @@ export const keybindings = (
         output: getOutput(currentCommand, setCommand),
       },
     ]);
-    setCurrentCommand('');
+    setCurrentCommand("");
     setUpArrowKeyPressed(0);
   } else if (e.keyCode === 38) {
     if (command.length > 0) {
       setUpArrowKeyPressed(upArrowKeyPressed + 1);
       if (command.length - upArrowKeyPressed - 1 >= 0) {
-        setCurrentCommand(command[command.length - upArrowKeyPressed - 1].command);
+        setCurrentCommand(
+          command[command.length - upArrowKeyPressed - 1].command
+        );
       }
     }
-  } else if (e.key === 'Tab') {
+  } else if (e.key === "Tab") {
     e.preventDefault();
-    if (currentCommand.toLowerCase().startsWith('so')) {
-      setCurrentCommand('socials');
-    } else if (currentCommand.toLowerCase().startsWith('sk')) {
-      setCurrentCommand('skills');
-    } else if (currentCommand.toLowerCase().startsWith('a')) {
-      setCurrentCommand('about');
-    } else if (currentCommand.toLowerCase().startsWith('pr')) {
-      setCurrentCommand('projects');
-    } else if (currentCommand.toLowerCase().startsWith('cli')) {
-      setCurrentCommand('clicks');
-    } else if (currentCommand.toLowerCase().startsWith('r')) {
-      setCurrentCommand('resume');
-    } else if (currentCommand.toLowerCase().startsWith('cle')) {
-      setCurrentCommand('clear');
-    } else if (currentCommand.toLowerCase().startsWith('h')) {
-      setCurrentCommand('help');
-    } else if (currentCommand.toLowerCase().startsWith('g')) {
-      setCurrentCommand('goals');
-    } else if (currentCommand.toLowerCase().startsWith('e')) {
-      setCurrentCommand('experience');
-    } else if (currentCommand.toLowerCase().startsWith('b')) {
-      setCurrentCommand('blogs');
-    } else if (currentCommand.toLowerCase().startsWith('sudo')) {
-      setCurrentCommand('sudo rm -rf /*');
+    if (currentCommand.toLowerCase().startsWith("so")) {
+      setCurrentCommand("socials");
+    } else if (currentCommand.toLowerCase().startsWith("sk")) {
+      setCurrentCommand("skills");
+    } else if (currentCommand.toLowerCase().startsWith("a")) {
+      setCurrentCommand("about");
+    } else if (currentCommand.toLowerCase().startsWith("pr")) {
+      setCurrentCommand("projects");
+    } else if (currentCommand.toLowerCase().startsWith("r")) {
+      setCurrentCommand("resume");
+    } else if (currentCommand.toLowerCase().startsWith("cle")) {
+      setCurrentCommand("clear");
+    } else if (currentCommand.toLowerCase().startsWith("h")) {
+      setCurrentCommand("help");
+    } else if (currentCommand.toLowerCase().startsWith("g")) {
+      setCurrentCommand("goals");
+    } else if (currentCommand.toLowerCase().startsWith("e")) {
+      setCurrentCommand("experience");
+    } else if (currentCommand.toLowerCase().startsWith("b")) {
+      setCurrentCommand("blogs");
+    } else if (currentCommand.toLowerCase().startsWith("sudo")) {
+      setCurrentCommand("sudo rm -rf /*");
     }
   }
 };

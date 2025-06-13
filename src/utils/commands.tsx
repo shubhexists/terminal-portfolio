@@ -34,9 +34,6 @@ export const getOutput = (
 
       closeWindow();
       return <></>;
-    case "clicks":
-      window.open("https://photos.shubh.sh/grid", "_blank");
-      return "Opening clicks in a new tab...";
     case "blogs":
       window.open("https://blog.shubh.sh", "_blank");
       return "Opening blogs in a new tab...";
@@ -52,7 +49,6 @@ export const getOutput = (
             { cmd: "📄 resume", desc: "Take a look at my resume" },
             { cmd: "💼 experience", desc: "Explore my professional journey" },
             { cmd: "🎯 goals", desc: "Discover my aspirations" },
-            { cmd: "📸 clicks", desc: "I upload random photographs here :)" },
             { cmd: "🧹 clear", desc: "Clear the terminal" },
             { cmd: "✍️ blogs", desc: "Nothing meaningful here :)" },
             { cmd: "⚠️ sudo rm -rf /*", desc: "Try at your own risk!" },
