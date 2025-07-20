@@ -34,7 +34,21 @@ export const keybindings = (
         );
       }
     }
-  } else if (e.key === "Tab") {
+  }else if (e.keyCode === 40) {
+    if (upArrowKeyPressed > 0) {
+      const newCount = upArrowKeyPressed - 1;
+      setUpArrowKeyPressed(newCount);
+      if (newCount === 0) {
+        setCurrentCommand("");
+      } else {
+        const index = command.length - newCount;
+        if (index >= 0) {
+          setCurrentCommand(command[index].command);
+        }
+      }
+    }
+  }
+   else if (e.key === "Tab") {
     e.preventDefault();
     if (currentCommand.toLowerCase().startsWith("so")) {
       setCurrentCommand("socials");
