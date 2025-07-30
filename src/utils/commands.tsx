@@ -345,22 +345,52 @@ export const getOutput = (
       return (
         <div className="space-y-6">
           {[
-            // {
-            //   company: "Dardoc",
-            //   role: "Software Engineer",
-            //   location: "Remote, UAE",
-            //   date: "Feb 2025 - Current",
-            //   description: "Backend Software Engineer",
-            //   achievements: [
-            //     "Working on the generating analytics from the Database.",
-            //   ],
-            //   icon: <FaCode className="text-[#f0883e] text-4xl" />,
-            // },
+            {
+              company: "Exotech",
+              role: "Blockchain Engineer (Solana)",
+              location: "Remote, USA",
+              date: "Jul 2025 - Present",
+              description: "",
+              achievements: [""],
+              icon: <FaCode className="text-[#f0883e] text-4xl" />,
+            },
+            {
+              company: "Blazeswap",
+              role: "Blockchain Engineer",
+              location: "Remote, India",
+              date: "Dec 2024 - Jul 2025",
+              description:
+                "Was responsible for developing Dex on XION and other blockchain products.",
+              achievements: [
+                "Was responsible for making a Swap on XION (Layer-1 on Cosmos ) using Cosmwasm contracts for the XION blockchain (Built on Cosmos)",
+                "Worked with Uniswap to create a router contract in Solidity used in Production. Contract deployed on Base Mainnet",
+                "Deployed CW20 Tokens and worked with several contracts like CW3 Multisig , Astroport and Terraswap",
+                "Mainnet live at - https://app.blazeswap.io ",
+                "TVL locked - 14k USD as of 30/07/2025",
+                "More than USD 100,000 Swap volume achieved in less than 4 days",
+              ],
+              icon: <FaCode className="text-[#f0883e] text-4xl" />,
+            },
+            {
+              company: "Dardoc",
+              role: "Senior Engineer",
+              location: "Remote, UAE",
+              date: "Jan 2025 - Jul 2025",
+              description:
+                "Working on Admin Panel and developing scalable backend APIs.",
+              achievements: [
+                "Created and maintained the Express endpoints for the company across the products",
+                "Worked on Advanced searching across the services using Typesense , remove Azure Cognitive Search saving several 100 Dollars monthly",
+                "Worked on the generating analytics from the Database",
+                "Worked solely to redevelop the admin panel from scratch",
+              ],
+              icon: <FaCode className="text-[#f0883e] text-4xl" />,
+            },
             {
               company: "Tezda Inc",
               role: "Senior Backend Developer",
               location: "Remote, UK",
-              date: "April 2024 - Feb 2025",
+              date: "April 2024 - Jul 2025",
               description: "Working on advanced backend systems and RTC stack.",
               achievements: [
                 "Developed App Notifications Backend using queues, sockets, and Firebase (FCM)",
@@ -413,7 +443,7 @@ export const getOutput = (
               company: "Vitalth Pvt. Ltd.",
               role: "Backend Developer",
               location: "Delhi, India",
-              date: "Dec 2020 - Jan 2022",
+              date: "Dec 2022 - Mar 2023",
               description:
                 "Developed a robust backend using India's UHI (Unified Health Interface) architecture.",
               achievements: [
