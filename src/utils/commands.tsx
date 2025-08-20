@@ -346,15 +346,6 @@ export const getOutput = (
         <div className="space-y-6">
           {[
             {
-              company: "Exotech",
-              role: "Blockchain Engineer (Solana)",
-              location: "Remote, USA",
-              date: "Jul 2025 - Present",
-              description: "",
-              achievements: [""],
-              icon: <FaCode className="text-[#f0883e] text-4xl" />,
-            },
-            {
               company: "Blazeswap",
               role: "Blockchain Engineer",
               location: "Remote, India",
